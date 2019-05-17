@@ -1,0 +1,68 @@
+.hero
+  margin: 0
+.slick-dots
+  list-style-type: none
+  display: flex
+  position: absolute
+  padding-left: 0px
+  top: 72vh
+  li
+    width: 57px
+    height: 3px
+    background-color: $color-element
+    margin-right: 16px
+    cursor: pointer
+    &:last-child
+      margin-right: 0px
+    button
+      display: none
+    &.slick-active
+      background-color: #ACACAC
+.slider
+  &-count
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: absolute
+    top: 20%
+    z-index: 10
+    color: #ffffff
+  &-current
+    font-size: 24px
+    line-height: 37px
+    text-align: justify
+    +light
+    margin-top: 30px
+    margin-right: 5px
+  &-all
+    font-size: 14px
+    line-height: 22px
+    text-align: justify
+    +light
+.slider-arrow
+  display: flex
+  justify-content: space-between
+  align-items: center
+  position: absolute
+  right: 0
+  bottom: 0
+  z-index: 10
+  .arrow
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 97px
+    height: 97px
+    background-color: rgba(0,0,0,0.7)
+    border: none
+    padding: 0
+    margin: 0
+    cursor: pointer
+    transition: $transition-all
+    &:hover
+      background-color: rgba(172,132,80,0.7)
+      transition: $transition-all
+
+@media (max-width: 991px) 
+	.slick-dots
+    top: 380px

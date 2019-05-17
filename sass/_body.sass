@@ -4,7 +4,6 @@ html
   scroll-behavior: smooth
 
 body
-  padding-top: 20px
   position: relative
   color: $color-text
   font-size: 16px
@@ -21,55 +20,36 @@ a
 h1, h2, h3
   margin: 0
 
-.button
-  display: inline-block
-  height: 60px
-  border: none
-  text-decoration: none
-  background-color: $color-element
-  color: #ffffff
-  font-size: 22px
-  padding: 16px 40px
-  border-radius: 5px
-  animation: button 5s linear infinite alternate
-  cursor: pointer
-  +semibold
-  transition: all 0.3s ease
-  &:hover
-    background-color: darken($color-element, 10%)
-    transition: all 0.3s ease
-
-
-.button-o
-  height: 45px
-  background-color: #ffffff
-  border: 2px $color-element solid
-  color: $color-element
-  padding: 9px 30px
-  font-size: 18px
-  +bold
-  &:hover
-    background-color: $color-element
-    color: #ffffff
-    transition: all 0.3s ease
-
 .slick-slide
   &:focus
     outline: none
 .slick-list, .slick-track
   height: 100%
 
+.button
+  display: inline-flex
+  justify-content: space-between
+  align-items: center
+  padding: 16px 30px
+  font-size: 18px
+  color: #ffffff
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1)
+  border-radius: 38px
+  background-color: $color-element
+  transition: $transition-all
+  &-title
+    margin-right: 16px
+  &:hover
+    background-color: darken($color-element,5%)
+    transition: $transition-all
 
 @media (max-width: 991px)
   body
-    padding-top: 0px
 
 @media (max-width: 767px)
-  .button
-    font-size: 20px
+  body
 
 @media (max-width: 575px)
   .button
-    font-size: 18px
-    height: 50px
-    padding: 12px 40px
+    padding: 14px 30px
+    font-size: 16px
