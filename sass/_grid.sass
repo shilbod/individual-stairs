@@ -5,6 +5,10 @@
   width: 100%
   margin: 90px 0
   position: relative
+  &-title
+    margin-bottom: 60px
+    font-size: 48px
+    +title-bold
 
 .container
   position: relative
@@ -20,9 +24,15 @@
 @media (max-width: 991px)
   .section
     margin: 60px 0
+    &-title
+      margin-bottom: 40px
+      font-size: 42px
 
 @media (max-width: 575px)
   .section
     margin: 40px 0
+    &-title
+      margin-bottom: 20px
+      font-size: 36px
   .container
     padding: 0 10px

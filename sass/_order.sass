@@ -1,0 +1,54 @@
+.order
+  margin: 0
+  padding: 200px 0
+  background-image: url('../img/bg-order.png')
+  background-repeat: no-repeat
+  background-position: center
+  background-size: 100% 100%
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-img
+    margin-left: -120px
+  .section-title
+    font-size: 40px
+    color: #ffffff
+    margin-bottom: 25px
+  &-subtitle
+    font-size: 24px
+    line-height: 1.2
+    color: #797979
+    margin-bottom: 25px
+  &-input-wrap
+    display: flex
+    flex-direction: column
+    margin-bottom: 40px
+  &-button-wrap
+    display: flex
+    align-items: baseline
+    justify-content: space-between
+    flex-flow: wrap
+  .input
+    height: 50px
+    background-color: #3B3B3B
+    border-radius: 5px
+    border: none
+    placeholder: #ffffff
+    color: #ffffff
+    padding-left: 20px
+    font-size: 18px
+  .input:nth-child(1)
+    margin-bottom: 20px
+  input[type="text"]::placeholder
+    color: #ffffff
+  .file-upload
+    cursor: pointer
+    background-color: #585858
+    &:hover
+      background-color: $color-element
+    input[type="file"]
+      display: none
+    span
+      margin-right: 16px
+  

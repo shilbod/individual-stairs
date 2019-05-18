@@ -3,8 +3,26 @@
   width: 100%
   top: 0
   padding: 10px 0
-  z-index: 10
-  background-color: rgba(255,255,255,0.9)
+  z-index: 100
+  background-color: #ffffff
+  transition: $transition-all
+  &-scroll
+    box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.15)
+    padding-bottom: 5px
+    transition: $transition-all
+.header-scroll .navbar-logo-img
+  width: 130px
+  transition: $transition-all
+.header-scroll .navbar-social i
+  font-size: 24px
+  transition: $transition-all
+.header-scroll .navbar-menu
+  flex-direction: row-reverse
+  align-items: center
+  transition: $transition-all
+.header-scroll .navbar-social
+  margin-left: 30px
+  transition: $transition-all
 .navbar
   &-wrap
     display: flex
@@ -13,16 +31,20 @@
   &-logo
     &-img
       width: 200px
+      transition: $transition-all
   &-social
     transition: $transition-all
-    &:hover
-      color: $color-element
+    i
+      font-size: 28px
       transition: $transition-all
+      &:hover
+        color: $color-element
   &-menu
     display: flex
     flex-direction: column
     align-items: flex-end
     margin-left: auto
+    transition: $transition-all
     &-wrap
       list-style-type: none
       display: flex
@@ -121,4 +143,4 @@
 @media (max-width: 575px)
   .navbar
     &__logo
-      width: 160px
+      width: 170px

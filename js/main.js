@@ -129,7 +129,32 @@ $(document).ready(function() {
     focusOnSelect: true,
     prevArrow: $('.arrow-left'),
     nextArrow: $('.arrow-right')
+	});
+	$('.portfolio-wrap').slick({
+		// autoplay: true,
+    centerMode: true,
+		centerPadding: '20%',
+		slidesToShow: 1,
+		draggable: false,
+    lazyLoad: true,
+		focusOnSelect: true,
+		prevArrow: $('.portfolio-arrow-left'),
+    nextArrow: $('.portfolio-arrow-right')
+	});
+	
+	$('.review-wrap').slick({
+		autoplay: true,
+		autoplaySpeed: 5000,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		pauseOnHover: false,
+    draggable: false,
+    lazyLoad: true,
+    focusOnSelect: true,
+    prevArrow: $('.review-arrow-left'),
+    nextArrow: $('.review-arrow-right')
   });
+
 });
 
 
@@ -143,3 +168,34 @@ $slickElement.on('init reInit afterChange', function (event, slick, currentSlide
 	$slider_current.text('0' + i);
 	$slider_all.text('/' + '0' + slick.slideCount);
 });
+
+
+$('input[type="file"]').on('change', function() {
+  var splittedFakePath = this.value.split('\\');
+  $('.file-upload span').text(splittedFakePath[splittedFakePath.length - 1]);
+});
+
+
+
+ymaps.ready(init);
+function init(){ 
+    var myMap = new ymaps.Map("map", {
+      center: [55.7, 37.6],
+      zoom: 14
+    });
+    var myGeoObject = new ymaps.GeoObject({
+    geometry: {
+      type: "Point", // тип геометрии - точка
+      coordinates: [52.363968, 30.367162] // координаты точки
+  },
+  properties: {
+  iconCaption: "Компания ТРАНС 7777",
+      balloonContentHeader: "ТРАНС 7777",
+      balloonContentBody: "Транспортные услуги в Речице",
+
+    }
+});
+
+// Размещение геообъекта на карте.
+myMap.geoObjects.add(myGeoObject);
+    }

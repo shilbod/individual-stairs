@@ -1,0 +1,28 @@
+.footer
+  padding: 90px 0
+  background-image: url('../img/bg-footer.jpg')
+  color: #ffffff
+  i
+    margin-right: 8px
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-tel
+    margin-bottom: 10px
+  &-phone, &-email, &-address
+    color: #ffffff
+    font-size: 14px
+    &:hover
+      color: $color-element
+  &-location
+    display: flex
+  &-menu
+    justify-content: flex-start
+    margin-bottom: 60px
+    li
+      a
+        color: #ffffff
+        +light
+    .navbar-menu-item:nth-child(1)
+      padding-left: 0px

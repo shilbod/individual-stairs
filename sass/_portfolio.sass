@@ -1,0 +1,22 @@
+.portfolio
+  width: 100%
+  &-wrap
+    margin: auto
+  &-item
+    object-fit: cover
+    width: 800px
+    height: 380px
+  &-arrow-left, &-arrow-right
+    background-color: #ffffff !important
+    width: 35px !important
+    height: 38px !important
+  &-arrow-left
+    border-right: 1px solid #000000 !important
+
+  .slick-slide
+    width: 800px !important
+    transition: $transition-all
+    opacity: 0.5
+  .slick-active
+    transition: $transition-all
+    opacity: 1
