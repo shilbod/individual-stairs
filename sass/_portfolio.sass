@@ -1,12 +1,12 @@
 .portfolio
   &-wrap
-    // margin: auto
+    margin: auto
+    width: 800px
+    height: 380px
   &-item
     display: block
     object-fit: cover
     position: relative
-    width: 800px
-    height: 380px
     margin: 0 auto
     padding: 160px 0
   &-arrow-left, &-arrow-right
@@ -43,16 +43,46 @@
       transition: $transition-all
 
   .slick-slide
-    width: 800px !important
+    // width: 800px !important
     transition: $transition-all
     opacity: 0.5
   .slick-active
     transition: $transition-all
     opacity: 1
-
-  .owl-item 
-    width: 800px
+  .slick-list
+    padding: 0px 0px !important
+    overflow: inherit
 
 @media (max-width: 991px)
   .portfolio
-    display: none
+    &-wrap
+      width: 100%
+    .slider-arrow
+      .arrow
+        width: 35px !important
+        height: 35px !important
+        img
+          width: 30% !important
+  .slick-list
+    overflow: hidden !important
+
+@media (max-width: 767px)
+  .portfolio
+    &-wrap
+      height: 300px
+    &-item
+      padding: 110px 0
+    &-title
+      right: 10px
+      left: 10px
+      font-size: 16px
+      line-height: 22px
+    .slider-arrow
+      display: flex
+      justify-content: space-between
+      width: 100%
+      top: 60%
+      transform: translateY(-50%)
+      .arrow
+        width: 35px !important
+        height: 35px !important

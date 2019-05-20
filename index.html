@@ -166,19 +166,19 @@
     <div class="container">
       <h2 class="section-title">Наши работы</h2>
     </div>
-    <div class="portfolio-wrap" data-glide-el="track">
-      <div class="portfolio-item" style="background-image: url('img/portfolio-item-1.jpg')">
-        <a href="#" class="portfolio-button"><i class="fas fa-play"></i></a>
-        <div class="portfolio-title">Professional buro with many years of experience</div>
-      </div>
-      <div class="portfolio-item" style="background-image: url('img/portfolio-item-1.jpg')">
-        <a href="#" class="portfolio-button"><i class="fas fa-play"></i></a>
-        <div class="portfolio-title">Professional buro with many years of experience</div>
-      </div>
-      <div class="portfolio-item" style="background-image: url('img/portfolio-item-1.jpg')">
-        <a href="#" class="portfolio-button"><i class="fas fa-play"></i></a>
-        <div class="portfolio-title">Professional buro with many years of experience</div>
-      </div>
+    <div class="portfolio-wrap">
+        <div class="portfolio-item" style="background-image: url('img/portfolio-item-1.jpg')">
+          <a class="portfolio-button" data-fancybox data-src="#popup-portfolio-1" href="javascript:;"><i class="fas fa-play"></i></a>
+          <div class="portfolio-title">Professional buro with many years of experience</div>
+        </div>
+        <div class="portfolio-item" style="background-image: url('img/portfolio-item-1.jpg')">
+          <a href="#" class="portfolio-button"><i class="fas fa-play"></i></a>
+          <div class="portfolio-title">Professional buro with many years of experience</div>
+        </div>
+        <div class="portfolio-item" style="background-image: url('img/portfolio-item-1.jpg')">
+          <a href="#" class="portfolio-button"><i class="fas fa-play"></i></a>
+          <div class="portfolio-title">Professional buro with many years of experience</div>
+        </div>
     </div>
     <div class="slider-arrow">
       <button class="arrow arrow-left slick-arrow portfolio-arrow-left">
@@ -336,6 +336,13 @@
           <h2 class="section-title">Получить консультацию</h2>
           <div class="order-subtitle">Опишите нам лестницу своей мечты и мы поможем её реализовать!</div>
           <form class="order-form">
+
+            <!-- Hidden Required Fields -->
+            <input type="hidden" name="project_name" value="IndividualStairs">
+            <input type="hidden" name="admin_email" value="zoidberx@mail.ru">
+            <input type="hidden" name="form_subject" value="Новая заявка">
+            <!-- END Hidden Required Fields -->
+
             <div class="order-input-wrap">
               <input class="field input" data-name="name" type="text" name="Имя" maxlength="56" placeholder="Имя" required>
               <input class="field input" data-name="phone" type="text" name="Номер телефона" maxlength="19" placeholder="Телефон" id="phone" required>
@@ -445,8 +452,8 @@
           <i class="fas fa-map-marker-alt"></i>
           <div class="footer-address">г. Москва, 1-й Нагатинский проезд, 2 с 36, офис 101</div>
         </div>
-        <a href="#" class="button">
-          <span class="button-title">Заказать звоной</span>
+        <a href="#" class="button" data-fancybox data-src="#popup" href="javascript:;">
+          <span class="button-title">Заказать звонок</span>
           <img src="img/Arrow-button.png" alt="">
         </a>
       </div>
@@ -479,11 +486,17 @@
       <button class="button popup-button" data-fancybox-close>OK</button>
     </div>
 
+    <div id="popup-portfolio-1" class="popup-portfolio-1" style="display: none;">
+      <div class="popup-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/YMLIil0jeF4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/script-form.js"></script>
+
 
   <script>
      $(window).on('load resize', function(){
@@ -503,6 +516,30 @@
   touch: {
     vertical: false,
   },
+});
+
+$(document).ready(function() {
+	//E-mail Ajax Send
+	$("form").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			$.fancybox.close();
+			$.fancybox.open({
+    			src  : '#trueModal',
+    			type : 'inline',
+			});
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+	});
+
 });
   </script>
 

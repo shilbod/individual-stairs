@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() {
 	
 	// If the comparison slider is present on the page lets initialise it, this is good you will include this in the main js to prevent the code from running when not needed
@@ -120,14 +122,30 @@ $(document).ready(function() {
     prevArrow: $('.arrow-left'),
     nextArrow: $('.arrow-right')
 	});
-	// $('.portfolio-wrap').slick({
-	// 	centerMode: true,
-	// 	slidesToShow: 1,
-  // 	slidesToScroll: 1,
-	// 	// focusOnSelect: true,
-	// 	prevArrow: $('.portfolio-arrow-left'),
-  //   nextArrow: $('.portfolio-arrow-right')
-	// });
+	$('.portfolio-wrap').slick({
+		// autoplay: true,
+		autoplaySpeed: 5000,
+		centerMode: true,
+		slidesToShow: 1,
+  	slidesToScroll: 1,
+		focusOnSelect: true,
+		prevArrow: $('.portfolio-arrow-left'),
+		nextArrow: $('.portfolio-arrow-right'),
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
+	});
 	
 	$('.review-wrap').slick({
 		autoplay: true,
