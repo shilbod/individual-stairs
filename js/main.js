@@ -114,12 +114,12 @@ $(window).on('load resize', function(){
 });
 
 $('.navbar-menu-button').on('click', function(){
-  $('.navbar-menu').slideToggle(200);
+  $('.navbar-menu').slideToggle(100);
 });  
 
 $(document).ready(function() {
   $('.main-slider').slick({
-    // autoplay: true,
+    autoplay: true,
 		autoplaySpeed: 5000,
 		dots: true,
 		swipe: false,
@@ -130,17 +130,14 @@ $(document).ready(function() {
     prevArrow: $('.arrow-left'),
     nextArrow: $('.arrow-right')
 	});
-	$('.portfolio-wrap').slick({
-		// autoplay: true,
-    centerMode: true,
-		centerPadding: '20%',
-		slidesToShow: 1,
-		draggable: false,
-    lazyLoad: true,
-		focusOnSelect: true,
-		prevArrow: $('.portfolio-arrow-left'),
-    nextArrow: $('.portfolio-arrow-right')
-	});
+	// $('.portfolio-wrap').slick({
+	// 	centerMode: true,
+	// 	slidesToShow: 1,
+  // 	slidesToScroll: 1,
+	// 	// focusOnSelect: true,
+	// 	prevArrow: $('.portfolio-arrow-left'),
+  //   nextArrow: $('.portfolio-arrow-right')
+	// });
 	
 	$('.review-wrap').slick({
 		autoplay: true,
@@ -152,10 +149,44 @@ $(document).ready(function() {
     lazyLoad: true,
     focusOnSelect: true,
     prevArrow: $('.review-arrow-left'),
-    nextArrow: $('.review-arrow-right')
-  });
+		nextArrow: $('.review-arrow-right'),
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
+	});
+	
+
+	$(window).on('load resize', function(){
+		if ($(window).width() < '768'){
+			$('.team-wrap').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 5000,
+				lazyLoad: true,
+    		focusOnSelect: true,
+				prevArrow: $('.team-arrow-left'),
+    		nextArrow: $('.team-arrow-right')
+			});
+		} else {
+		}
+	});
 
 });
+
+
+
 
 
 var $slider_current = $('.slider-current');
@@ -174,28 +205,3 @@ $('input[type="file"]').on('change', function() {
   var splittedFakePath = this.value.split('\\');
   $('.file-upload span').text(splittedFakePath[splittedFakePath.length - 1]);
 });
-
-
-
-ymaps.ready(init);
-function init(){ 
-    var myMap = new ymaps.Map("map", {
-      center: [55.7, 37.6],
-      zoom: 14
-    });
-    var myGeoObject = new ymaps.GeoObject({
-    geometry: {
-      type: "Point", // тип геометрии - точка
-      coordinates: [52.363968, 30.367162] // координаты точки
-  },
-  properties: {
-  iconCaption: "Компания ТРАНС 7777",
-      balloonContentHeader: "ТРАНС 7777",
-      balloonContentBody: "Транспортные услуги в Речице",
-
-    }
-});
-
-// Размещение геообъекта на карте.
-myMap.geoObjects.add(myGeoObject);
-    }

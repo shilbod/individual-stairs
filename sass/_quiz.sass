@@ -13,3 +13,28 @@
   &-subtitle
     font-size: 18px
     line-height: 1.5
+
+@media (max-width: 991px)
+  .quiz
+    &-wrap
+      padding-right: 0px
+
+@media (max-width: 767px)
+  .quiz
+    margin: 40px 0
+    &-wrap
+      flex-direction: column
+    &-title-wrap
+      margin-bottom: 30px
+    &-title
+      text-align: center
+      margin-bottom: 10px
+    &-subtitle
+      text-align: center
+
+@media (max-width: 575px)
+  .quiz
+    &-title
+      font-size: 20px
+    &-subtitle
+      font-size: 16px

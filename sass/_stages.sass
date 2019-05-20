@@ -2,6 +2,9 @@
   background-repeat: no-repeat
   background-image: url('../img/bg-stages.png')
   margin: 0
+  background-repeat: no-repeat
+  background-position: center
+  background-size: 100% 100%
   padding: 90px 0
   &-wrap
     display: flex
@@ -38,3 +41,82 @@
   &-title
     font-size: 16px
     line-height: 1.2
+  &-number
+    display: none
+
+
+@media (max-width: 1199px)
+  .stages
+    &-wrap
+      padding: 0
+
+@media (max-width: 991px)
+  .stages
+    padding: 60px 0
+    &-wrap
+      flex-direction: column
+    &-item
+      justify-content: flex-start
+      align-items: center
+      &:nth-child(n)
+        margin-left: 0px 
+        margin-bottom: 20px
+      &:nth-child(2)
+        margin-left: 60px
+      &:nth-child(3)
+        margin-left: 120px
+      &:nth-child(4)
+        margin-left: 180px
+      &:nth-child(5)
+        margin-left: 240px
+      &:nth-child(6)
+        margin-left: 300px
+      &:nth-child(7)
+        margin-left: 360px
+      &:nth-child(8)
+        margin-left: 420px
+    &-el
+      display: none
+    &-number
+      display: block
+      background-color: $color-element
+      +title-bold
+      font-size: 52px
+      line-height: 52px
+      color: #ffffff
+      width: 90px
+      height: 80px
+      padding-top: 5px
+      border-radius: 5px
+      margin-right: 20px
+      text-align: center
+    &-icon
+      margin-left: 0px
+      margin-bottom: 0px
+    &-title
+      margin-bottom: 0px
+
+@media (max-width: 767px)
+  .stages
+    &-item
+      &:nth-child(n)
+        margin-left: 0px
+
+@media (max-width: 767px)
+  .stages
+    padding: 40px 0
+    &-item
+      flex-direction: column
+      margin-bottom: 40px
+    &-number
+      margin-bottom: 20px
+      height: 70px
+      font-size: 42px
+      line-height: 42px
+      padding-top: 8px
+      margin-right: 0px
+    &-icon
+      margin-right: 0px
+      margin-bottom: 10px
+    &-title
+      text-align: center

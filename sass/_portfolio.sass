@@ -1,17 +1,46 @@
 .portfolio
-  width: 100%
   &-wrap
-    margin: auto
+    // margin: auto
   &-item
+    display: block
     object-fit: cover
+    position: relative
     width: 800px
     height: 380px
+    margin: 0 auto
+    padding: 160px 0
   &-arrow-left, &-arrow-right
     background-color: #ffffff !important
     width: 35px !important
     height: 38px !important
   &-arrow-left
     border-right: 1px solid #000000 !important
+  &-title
+    position: absolute
+    background-color: #ffffff
+    left: 15px
+    bottom: 15px
+    padding: 3px 15px
+    font-size: 18px
+    line-height: 28px
+    text-transform: capitalize
+    +medium
+  &-button
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 30px
+    border: 2px solid #ffffff
+    width: 57px
+    height: 57px
+    background-color: $color-element
+    color: #ffffff
+    font-size: 18px
+    transition: $transition-all
+    margin: auto
+    &:hover
+      transform: scale(1.2)
+      transition: $transition-all
 
   .slick-slide
     width: 800px !important
@@ -20,3 +49,10 @@
   .slick-active
     transition: $transition-all
     opacity: 1
+
+  .owl-item 
+    width: 800px
+
+@media (max-width: 991px)
+  .portfolio
+    display: none

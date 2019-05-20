@@ -31,5 +31,58 @@
       color: #797979
   &-img
     align-self: stretch
+
+@media (max-width: 1199px)
+  .about
+    &-text
+      width: 40%
+    &-info
+      margin-right: 0px
+
+@media (max-width: 991px)
+  .about
+    &-wrap
+      flex-direction: column
+    &-text
+      width: 100%
+      margin-bottom: 30px
+    &-info
+      width: 100%
+      flex-direction: row
+      justify-content: space-around
+      margin-bottom: 30px
+      &-item
+        width: 28%
+      &-title, &-subtitle
+        text-align: center
+    &-img
+      object-fit: cover
+      height: 400px
+      width: 100%
+
+@media (max-width: 767px)
+  .about 
+    &-text
+      font-size: 18px
+    &-info
+      &-item
+        width: 30%
+        justify-content: space-between
+      &-title
+        font-size: 54px
+      &-subtitle
+        font-size: 16px
+    &-img
+      height: 300px
+
+@media (max-width: 575px)
+  .about 
+    &-info
+      &-title
+        font-size: 42px
+      &-subtitle
+        font-size: 14px
+    &-img
+      height: 260px
     
     

@@ -9,6 +9,8 @@
   <title>Individual Stairs &#8211; От идеи до лестницы один шаг</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="libs/fontawesome/all.min.css">
+  <link rel="stylesheet" href="css/glide.theme.min.css">
+  <link rel="stylesheet" href="css/glide.core.min.css">
   <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/vnd.microsoft.icon">
 </head>
 <body>
@@ -136,7 +138,7 @@
           Мы в компании "IndividualStairs" изготавливаем лестницы в коттеджи, апартаменты и офисы.<br><br>
           К нам обращаются, когда лестница нужна как предмет интерьера, а не только как надежная конструкция.<br><br>
           Мы с партнером провели много времени, перенимая опыт и технологии итальянских коллег, чтобы создать подобное ателье и в России.<br><br>
-          Я убежден в том, что в нашей стране тоже должны быть качественные и красивые лестницы, у наших клиентов так точно.<br><br><br>
+          Я убежден в том, что в нашей стране тоже должны быть качественные и красивые лестницы, у наших клиентов так точно.<br><br>
           <i>Руслан Картавенко</i>
         </div>
         <div class="about-info">
@@ -165,12 +167,18 @@
     <div class="container">
       <h2 class="section-title">Наши работы</h2>
     </div>
-    <div class="portfolio-wrap">
+    <div class="portfolio-wrap" data-glide-el="track">
       <div class="portfolio-item" style="background-image: url('img/portfolio-item-1.jpg')">
+        <a href="#" class="portfolio-button"><i class="fas fa-play"></i></a>
+        <div class="portfolio-title">Professional buro with many years of experience</div>
       </div>
       <div class="portfolio-item" style="background-image: url('img/portfolio-item-1.jpg')">
+        <a href="#" class="portfolio-button"><i class="fas fa-play"></i></a>
+        <div class="portfolio-title">Professional buro with many years of experience</div>
       </div>
       <div class="portfolio-item" style="background-image: url('img/portfolio-item-1.jpg')">
+        <a href="#" class="portfolio-button"><i class="fas fa-play"></i></a>
+        <div class="portfolio-title">Professional buro with many years of experience</div>
       </div>
     </div>
     <div class="slider-arrow">
@@ -222,41 +230,49 @@
       <div class="stages-wrap">
         <div class="stages-item">
           <img src="img/el-1.png" alt="" class="stages-el">
+          <div class="stages-number">01</div>
           <img src="img/el-icon-1.png" alt="" class="stages-icon">
           <div class="stages-title">Согласование типа<br> лестницы, расчет цены</div>
         </div>
         <div class="stages-item">
           <img src="img/el-2.png" alt="" class="stages-el">
+          <div class="stages-number">02</div>
           <img src="img/el-icon-2.png" alt="" class="stages-icon">
           <div class="stages-title">Знакомство<br> с объектом, замер</div>
         </div>
         <div class="stages-item">
           <img src="img/el-3.png" alt="" class="stages-el">
+          <div class="stages-number">03</div>
           <img src="img/el-icon-3.png" alt="" class="stages-icon">
           <div class="stages-title">Создание проекта именно Вашей<br> лестницы, подбор цветов и оттенков</div>
         </div>
         <div class="stages-item">
           <img src="img/el-4.png" alt="" class="stages-el">
+          <div class="stages-number">04</div>
           <img src="img/el-icon-4.png" alt="" class="stages-icon">
           <div class="stages-title">Производство несущих<br> элементов конструкции</div>
         </div>
         <div class="stages-item">
           <img src="img/el-5.png" alt="" class="stages-el">
+          <div class="stages-number">05</div>
           <img src="img/el-icon-5.png" alt="" class="stages-icon">
           <div class="stages-title">Монтаж несущих элементов<br> и закладных деталей</div>
         </div>
         <div class="stages-item">
           <img src="img/el-6.png" alt="" class="stages-el">
+          <div class="stages-number">06</div>
           <img src="img/el-icon-6.png" alt="" class="stages-icon">
           <div class="stages-title">Производство ступеней<br> и ограждений</div>
         </div>
         <div class="stages-item">
           <img src="img/el-7.png" alt="" class="stages-el">
+          <div class="stages-number">07</div>
           <img src="img/el-icon-7.png" alt="" class="stages-icon">
           <div class="stages-title">Монтаж самой важной<br> и привлекательной части</div>
         </div>
         <div class="stages-item">
           <img src="img/el-8.png" alt="" class="stages-el">
+          <div class="stages-number">08</div>
           <img src="img/el-icon-8.png" alt="" class="stages-icon">
           <div class="stages-title">Фото на память</div>
         </div>
@@ -301,6 +317,14 @@
           <a href="mailto:5@individualstairs.ru" class="team-email">5@individualstairs.ru</a>
         </div>
       </div>
+      <div class="slider-arrow">
+        <button class="arrow arrow-left slick-arrow team-arrow-left">
+          <img src="img/review-arrow-left.png" alt="">          
+        </button>
+        <button class="arrow arrow-right slick-arrow team-arrow-right">
+          <img src="img/review-arrow-right.png" alt="">          
+        </button>
+      </div>
     </div>
   </section>
   <!-- /.section team -->
@@ -319,9 +343,11 @@
             </div>
             <div class="order-button-wrap">
               <div class="button file-upload">
-                <input type="file" name="file" onchange="getFileName ();">
-                <span>Прикрепить фото</span>
-                <img src="img/icon-load.png" alt="">
+                <label>
+                  <input type="file" name="file" onchange="getFileName ();">
+                  <span>Прикрепить фото</span>
+                  <img src="img/icon-load.png" alt="">
+                </label>
               </div>
               <a href="#" class="button">
                 <span class="button-title">Отправить</span>
@@ -407,8 +433,8 @@
           <a href="#contact">КОНТАКТЫ</a>
         </li>
       </ul>
-      <div class="footer-wrap" id="contact"
-        <img src="img/logo-footer.png" alt="" class="footer-logo">
+      <div class="footer-wrap" id="contact">
+        <a href="/"><img src="img/logo-footer.png" alt="" class="footer-logo"></a>
         <div class="footer-info">
           <div class="footer-tel">
             <i class="fas fa-phone"></i>
@@ -421,7 +447,7 @@
         </div>
         <div class="footer-location">
           <i class="fas fa-map-marker-alt"></i>
-          <div class="footer-address">г. Москва, 1-й Нагатинский проезд,<br> 2 с 36, офис 101</div>
+          <div class="footer-address">г. Москва, 1-й Нагатинский проезд, 2 с 36, офис 101</div>
         </div>
         <a href="#" class="button">
           <span class="button-title">Заказать звоной</span>
@@ -434,6 +460,27 @@
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/glide.js"></script>
+  <script src="js/glide.esm.js"></script>
+
+  <script>
+  var glide = new Glide('.portfolio-wrap', {
+  type: 'carousel',
+  perView: 4,
+  focusAt: 'center',
+  breakpoints: {
+    800: {
+      perView: 2
+    },
+    480: {
+      perView: 1
+    }
+  }
+})
+
+glide.mount()
+  </script>
+
 
 </body>
 </html>

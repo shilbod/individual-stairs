@@ -17,6 +17,7 @@
       color: $color-element
   &-location
     display: flex
+    width: 23%
   &-menu
     justify-content: flex-start
     margin-bottom: 60px
@@ -26,3 +27,33 @@
         +light
     .navbar-menu-item:nth-child(1)
       padding-left: 0px
+
+@media (max-width: 1199px)
+  .footer
+    &-logo
+      width: 220px
+    &-location
+      width: 25%
+
+@media (max-width: 991px)
+  .footer
+    padding: 60px 0
+    &-logo
+      margin-bottom: 30px
+    &-wrap
+      flex-direction: column
+    &-info
+      margin-bottom: 30px
+    &-location
+      width: 30%
+      margin-bottom: 30px
+
+@media (max-width: 767px)
+  .footer
+    &-location
+      width: 40%
+
+@media (max-width: 575px)
+  .footer
+    &-location
+      width: 70%
