@@ -29,6 +29,10 @@
     align-items: baseline
     justify-content: space-between
     flex-flow: wrap
+    .button
+      border: none
+      img
+        margin-left: 16px
   .input
     height: 50px
     background-color: #3B3B3B
@@ -46,6 +50,7 @@
     background-color: #585858
     label
       display: flex
+      align-items: center
       cursor: pointer
     &:hover
       background-color: $color-element
@@ -86,12 +91,15 @@
       width: 100%
     .section-title
       font-size: 36px
+      text-align: center
     &-subtitle
       font-size: 20px
+      text-align: center
     &-button-wrap
-      justify-content: flex-start
+      justify-content: center
+      align-items: center
     .file-upload
-      margin-right: 30px
+      margin-right: 0px
     &-input-wrap
       margin-bottom: 20px
   

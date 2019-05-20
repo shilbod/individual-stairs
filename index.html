@@ -9,8 +9,7 @@
   <title>Individual Stairs &#8211; От идеи до лестницы один шаг</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="libs/fontawesome/all.min.css">
-  <link rel="stylesheet" href="css/glide.theme.min.css">
-  <link rel="stylesheet" href="css/glide.core.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/vnd.microsoft.icon">
 </head>
 <body>
@@ -119,7 +118,7 @@
     <div class="container">
       <div class="help-wrap">
         <span class="help-title">Поможем с выбором лестницы</span>
-        <a href="#" class="button">
+        <a href="#" class="button" data-fancybox data-src="#popup" href="javascript:;">
           <span class="button-title">Связаться с нами</span>
           <img src="img/Arrow-button.png" alt="">
         </a>
@@ -349,10 +348,7 @@
                   <img src="img/icon-load.png" alt="">
                 </label>
               </div>
-              <a href="#" class="button">
-                <span class="button-title">Отправить</span>
-                <img src="img/Arrow-button.png" alt="">
-              </a>
+              <button class="button" type="submit">Отправить<img src="img/Arrow-button.png" alt=""></button>
             </div>
           </form>
         </div>
@@ -457,28 +453,57 @@
     </div>
   </footer>
 
+  <!-- popup -->
+
+  <div id="popup" class="popup-main" style="display: none">
+      <h2 class="popup-title">Заказать звонок</h2>
+      <div class="popup-subtitle">Сделайте заявку на звонок, и наш эксперт свяжется с вами в ближайшее время</div>
+      <form class="popup-form">
+  
+        <!-- Hidden Required Fields -->
+        <input type="hidden" name="project_name" value="IndividualStairs">
+        <input type="hidden" name="admin_email" value="zoidberx@mail.ru">
+        <input type="hidden" name="form_subject" value="Новая заявка (попап)">
+        <!-- END Hidden Required Fields -->
+  
+        <input class="field input" data-name="name" type="text" name="Имя" maxlength="56" placeholder="Имя" required>
+        <input class="field input" data-name="phone" type="text" name="Номер телефона" maxlength="19" placeholder="Телефон" required>
+        <input class="field input" data-name="email" type="text" name="E-mail" maxlength="56" placeholder="E-mail" required>
+        <button class="button popup-button" type="submit">Отправить<img src="img/Arrow-button.png" alt=""></button>
+      </form>
+    </div>
+
+    <div class="popup-thanks" id="trueModal" style="display: none;">
+      <h3 class="popup-title">Спасибо за заявку!</h3>
+      <span class="popup-subtitle">Скоро мы с вами свяжемся</span>
+      <button class="button popup-button" data-fancybox-close>OK</button>
+    </div>
+
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/slick.min.js"></script>
-  <script src="js/glide.js"></script>
-  <script src="js/glide.esm.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/script-form.js"></script>
 
   <script>
-  var glide = new Glide('.portfolio-wrap', {
-  type: 'carousel',
-  perView: 4,
-  focusAt: 'center',
-  breakpoints: {
-    800: {
-      perView: 2
-    },
-    480: {
-      perView: 1
-    }
-  }
-})
+     $(window).on('load resize', function(){
+	if ($(window).width() >= '768'){
+		var p = $( "#el" );
+		var offset = p.offset();
+		$( ".slide-title" ).css("left",offset.left);
+		$( ".slide-subtitle" ).css("left",offset.left);
+		$( ".slick-dots" ).css("left",offset.left);
+		$( ".slider-count" ).css("right",offset.left);
+	} else {
+	}
+});
 
-glide.mount()
+ $('[data-fancybox]').fancybox({
+  autoFocus: false,
+  touch: {
+    vertical: false,
+  },
+});
   </script>
 
 
