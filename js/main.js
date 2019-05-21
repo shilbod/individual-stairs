@@ -111,7 +111,7 @@ $('.navbar-menu-button').on('click', function(){
 
 $(document).ready(function() {
   $('.main-slider').slick({
-    autoplay: true,
+    // autoplay: true,
 		autoplaySpeed: 5000,
 		dots: true,
 		swipe: false,
@@ -123,12 +123,15 @@ $(document).ready(function() {
     nextArrow: $('.arrow-right')
 	});
 	$('.portfolio-wrap').slick({
-		// autoplay: true,
+		autoplay: true,
 		autoplaySpeed: 5000,
 		centerMode: true,
 		slidesToShow: 1,
   	slidesToScroll: 1,
 		focusOnSelect: true,
+		swipe: false,
+    pauseOnHover: false,
+    draggable: false,
 		prevArrow: $('.portfolio-arrow-left'),
 		nextArrow: $('.portfolio-arrow-right'),
 		responsive: [
@@ -152,7 +155,8 @@ $(document).ready(function() {
 		autoplaySpeed: 5000,
 		slidesToShow: 4,
 		slidesToScroll: 1,
-		pauseOnHover: false,
+		swipe: false,
+    pauseOnHover: false,
     draggable: false,
     lazyLoad: true,
     focusOnSelect: true,
@@ -183,7 +187,10 @@ $(document).ready(function() {
 				autoplay: true,
 				autoplaySpeed: 5000,
 				lazyLoad: true,
-    		focusOnSelect: true,
+				focusOnSelect: true,
+				swipe: false,
+    		pauseOnHover: false,
+    		draggable: false,
 				prevArrow: $('.team-arrow-left'),
     		nextArrow: $('.team-arrow-right')
 			});
