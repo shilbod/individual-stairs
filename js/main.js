@@ -202,8 +202,6 @@ $(document).ready(function() {
 
 
 
-
-
 var $slider_current = $('.slider-current');
 var $slider_all = $('.slider-all');
 var $slickElement = $('.main-slider');
@@ -211,8 +209,8 @@ var $slickElement = $('.main-slider');
 $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
   //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
   var i = (currentSlide ? currentSlide : 0) + 1;
-	$slider_current.text('0' + i);
-	$slider_all.text('/' + '0' + slick.slideCount);
+	$slider_current.text( i);
+	$slider_all.text('/' + slick.slideCount);
 });
 
 
