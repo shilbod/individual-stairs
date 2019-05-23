@@ -2186,8 +2186,13 @@ h1, h2, h3 {
   margin-bottom: 0;
 }
 
+#map {
+  width: 100%;
+  height: 500px;
+}
+
 @media (max-width: 767px) {
-  iframe {
+  #ma {
     height: 320px;
   }
 }

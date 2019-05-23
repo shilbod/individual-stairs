@@ -218,3 +218,94 @@ $('input[type="file"]').on('change', function() {
   var splittedFakePath = this.value.split('\\');
   $('.file-upload span').text(splittedFakePath[splittedFakePath.length - 1]);
 });
+
+
+
+// Карта
+ymaps.ready(init);
+
+function init() {
+    var myMap = new ymaps.Map("map", {
+            center: [55.76, 37.64],
+						zoom: 10,
+						controls: ['smallMapDefaultSet'],
+						behaviors: ['multiTouch']
+        }),
+
+    // Создаем геообъект с типом геометрии "Точка".
+        myObjects = new ymaps.Placemark([
+        ], {
+        });
+
+    myMap.geoObjects
+        .add(new ymaps.Placemark([55.684758, 37.738521], {
+          balloonContentBody: '<img src="img/slider-before.jpg" height="200" width="280"> <br/>' +
+            '<b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>',
+          hintContent: 'Рога и копыта'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/loc.png',
+            iconImageSize: [28, 41],
+            iconImageOffset: [-5, -38]
+        }))
+        .add(new ymaps.Placemark([55.833436, 37.715175], {
+          balloonContentBody: '<img src="img/slider-before.jpg" height="200" width="280"> <br/>' +
+            '<b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>',
+          hintContent: 'Рога и копыта'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/loc.png',
+            iconImageSize: [28, 41],
+            iconImageOffset: [-5, -38]
+        }))
+        .add(new ymaps.Placemark([55.687086, 37.529789], {
+          balloonContentBody: '<img src="img/slider-before.jpg" height="200" width="280"> <br/>' +
+            '<b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>',
+          hintContent: 'Рога и копыта'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/loc.png',
+            iconImageSize: [28, 41],
+            iconImageOffset: [-5, -38]
+        }))
+        .add(new ymaps.Placemark([55.782392, 37.614924], {
+          balloonContentBody: '<img src="img/slider-before.jpg" height="200" width="280"> <br/>' +
+            '<b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>',
+          hintContent: 'Рога и копыта'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/loc.png',
+            iconImageSize: [28, 41],
+            iconImageOffset: [-5, -38]
+        }))
+        .add(new ymaps.Placemark([55.642063, 37.656123], {
+            balloonContentBody: '<img src="img/slider-before.jpg" height="200" width="280"> <br/>' +
+            '<b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>',
+          hintContent: 'Рога и копыта'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/loc.png',
+            iconImageSize: [28, 41],
+            iconImageOffset: [-5, -38]
+        }))
+        .add(new ymaps.Placemark([55.826479, 37.487208], {
+          balloonContentBody: '<img src="img/slider-before.jpg" height="200" width="280"> <br/>' +
+            '<b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>',
+          hintContent: 'Рога и копыта'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/loc.png',
+            iconImageSize: [28, 41],
+            iconImageOffset: [-5, -38]
+        }))
+        .add(new ymaps.Placemark([55.694843, 37.435023], {
+          balloonContentBody: '<img src="img/slider-before.jpg" height="200" width="280"> <br/>' +
+            '<b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>',
+          hintContent: 'Рога и копыта'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/loc.png',
+            iconImageSize: [28, 41],
+            iconImageOffset: [-5, -38]
+        }))
+}
